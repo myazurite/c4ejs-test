@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Color Picker</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+		<meta name="X-UA-Compatible" content="IE=Edge" />
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	
+	<body>
+		<div class="container" id="root">
+			<!--display section-->
+			<section class="section">
+				<div class="section-header flex">
+					<h3>Bộ chọn màu</h3>
+				</div>
+				<div class="divider"></div>
+				<div class="color-display" id="color-display"></div>
+				<button id="random-color-button">Tạo màu ngẫu nhiên</button>
+			</section>
+			<section class="section">
+				<div class="color-gradient" id="color-gradient"></div>
+			</section>
+
+			<!--color code section-->
+			<section class="section">
+				<!--adjust rgb-->
+				<div class="adjust-Rgb-group">
+					<div class="rgb-slider-group flex">
+						<div class="red-slider">
+							<div class="label-group flex">
+								<p>Red</p>
+								<p id="color-slider-red-label">221</p>
+							</div>
+							<input type="range" min="0" max="255" value="221" id="color-slider-red">
+						</div>
+						<div class="blue-slider">
+							<div class="label-group flex">
+								<p>Green</p>
+								<p id="color-slider-green-label">221</p>
+							</div>
+							<input type="range" min="0" max="255" value="221" id="color-slider-green">
+						</div>
+						<div class="green-slider">
+							<div class="label-group flex">
+								<p>Blue</p>
+								<p id="color-slider-blue-label">221</p>
+							</div>
+							<input type="range" min="0" max="255" value="221" id="color-slider-blue">
+						</div>
+					</div>
+				</div>
+
+				<!--color input-->
+				<div class="color-input-group flex">
+					<div class="hex-color-input">
+						<label for="hex-input" style="text-align: center">Hex</label>
+						<input type="text" id="hex-input" class="input-hex" placeholder="DDDDDD" style="text-align: center" disabled/>
+						<div id="copyBtn">
+							<img src="assets/copy-svgrepo-com.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="color-input-group gradient flex">
+					<div class="rgb-color-input">
+						<label for="rgb-input">RGB</label>
+						<input type="text" id="rgb-input" class="input-rgb" placeholder="rgb(221, 221, 221)" disabled />
+					</div>
+					<div class="rgb-color-input">
+						<label for="cmyk-input">CMYK</label>
+						<input type="text" id="cmyk-input" class="input-rgb" placeholder="" disabled />
+					</div>
+					<div class="rgb-color-input">
+						<label for="hsv-input">HSV</label>
+						<input type="text" id="hsv-input" class="input-rgb" placeholder="" disabled />
+					</div>
+					<div class="rgb-color-input">
+						<label for="hsl-input">HSL</label>
+						<input type="text" id="hsl-input" class="input-rgb" placeholder="" disabled />
+					</div>
+				</div>
+
+
+			</section>
+		</div>
+		<script src="index.js" type="text/javascript"></script>
+	</body>
+</html>

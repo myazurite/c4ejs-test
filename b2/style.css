@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "arial", sans-serif;
+	font-size: 16px;
+	max-width: 100%;
+	min-height: 100%;
+	background-color: #bcd6f3;
+}
+
+.container {
+	max-width: 600px;
+	margin: 20px auto;
+	background-color: #ffffff;
+}
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+input {
+	cursor: pointer;
+}
+.section {
+	padding: 20px;
+}
+.section-header {
+	text-transform: capitalize;
+}
+.section-header button {
+	border: none;
+	color: #ff6733;
+	font-weight: 600;
+	cursor: pointer;
+	user-select: none;
+}
+.divider {
+	margin: 4px 0;
+	border-top: 1px solid #dddddd;
+}
+
+/*Display section*/
+
+.color-display {
+	width: 100%;
+	height: 150px;
+	background-color: #dddddd;
+}
+
+/*Color code section*/
+.color-input-group label {
+	margin-top: 16px;
+	display: block;
+	font-weight: 600;
+}
+.color-input-group input {
+	background: #ffffff;
+	color: #000000;
+	font-size: 15px;
+    padding: 3px 5px;
+    margin-top: 5px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+}
+.color-input-group input:focus {
+	border-color: #ff6733;
+	outline: none;
+}
+.gradient {
+	flex-wrap: wrap;
+}
+.hex-color-input {
+	width: 100%;
+	position: relative;
+}
+.hex-color-input input {
+	width: 100%;
+}
+.hex-color-input img {
+	width: 18px;
+	position: absolute;
+	top: calc(55% + 8px);
+	right: 5px;
+	cursor: pointer;
+}
+.input-group {
+	display: flex;
+	gap: 5px;
+	position: relative;
+}
+.adjust-Rgb-group .title {
+	margin: 20px 0;
+	font-weight: 600;
+}
+label {
+	user-select: none;
+}
+
+/*toast message*/
+
+.toast-message {
+	padding: 10px 20px;
+	font-size: 18px;
+	border-radius: 5px;
+	text-align: center;
+	background-color:#22c7b8;
+	color: #ffffff;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.toast-animation-slide-in{
+	animation: toast-animation-in 0.5s ease-in;
+}
+.toast-animation-slide-out{
+	animation: toast-animation-out 0.5s ease-in;
+}
+
+@keyframes toast-animation-in {
+	from {
+		transform: translateX(200px);
+		opacity: 0;
+	}
+	to{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+@keyframes toast-animation-out {
+	from {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+	to{
+		transform: translateX(200px);
+		opacity: 0;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.color-input-group,
+	.rgb-slider-group {
+		display: block;
+	}
+	.color-input-group div, 
+	.rgb-slider-group div {
+		max-width: 70%;
+		margin: auto;
+	}
+	.adjust-Rgb-group .title {
+		max-width: 70%;
+		margin: 20px auto;
+	}
+}
