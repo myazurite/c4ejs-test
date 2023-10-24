@@ -175,11 +175,18 @@ function generateHSLColor({ red, green, blue }) {
 
 document.getElementById("random-color-button").addEventListener("click", generateRandomColor);
 
+
+
 function generateRandomColor() {
 	const randomColor = getRandomColor();
 	updateColorCodeToDom(randomColor);
+	updateBackgroundColor(randomColor);
 }
 
+function updateBackgroundColor(color) {
+	const hexColor = generateHexColor(color);
+	document.body.style.backgroundColor = `#${hexColor}`;
+}
 function getRandomColor() {
 	const red = getRandomValue(0, 255);
 	const green = getRandomValue(0, 255);
